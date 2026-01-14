@@ -7,7 +7,7 @@ def get_cats_info(path):
         with open(path, 'r', encoding='utf-8') as file:
             for line in file:
                 id, name, age = line.strip().split(',')
-                cats_dict.append({'id': id, 'name': name, 'age': int(age)})
+                cats_dict.append({'id': id, 'name': name, 'age': age})
     except FileNotFoundError:
         print("Файл не знайдено")
     except ValueError:
